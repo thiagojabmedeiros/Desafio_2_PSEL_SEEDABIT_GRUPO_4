@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro para Agendamento</title>
+
+    <!-- Fontes para a página-->
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Fonte poppins-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Cadastro para Agendamento</h1>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container flex-grow">
+        
+        
+        <section class="agendamento-section">
+            
+            <!-- Coluna da Esquerda: Calendário -->
+            <div class="col-calendario">
+                <div id ="cardCalendario" class="calendario-card">
+                    <!-- Navegação por mês -->
+                    <div class="calendario-header">
+                        <span class="calendario-nav">‹</span>
+                        <span>Dezembro 2025</span>
+                        <span class="calendario-nav">›</span>
+                    </div>
+
+                    <!-- Dias da Semana -->
+                    <div class="calendario-grid-header">
+                        <div class="day-name">D</div>
+                        <div class="day-name">S</div>
+                        <div class="day-name">T</div>
+                        <div class="day-name">Q</div>
+                        <div class="day-name">Q</div>
+                        <div class="day-name">S</div>
+                        <div class="day-name">S</div>
+                    </div>
+
+                    <!-- Dias Numéricos -->
+                    <div class="calendario-grid-days" id="grid-dias">
+                        
+                        <div class="day-number">1</div>
+                        <div class="day-number">2</div>
+                        <div class="day-number">3</div>
+                        <div class="day-number">4</div>
+                        <div class="day-number">5</div>
+                        <div class="day-number">6</div>
+                        <div class="day-number">7</div>
+                        
+                        
+                        <div class="day-number">8</div>
+                        <div class="day-number">9</div>
+                        <div class="day-number">10</div>
+                        <div class="day-number">11</div>
+                        <div class="day-number">12</div>
+                        <div class="day-number">13</div>
+                        <div class="day-number">14</div>
+
+                        
+                        <div class="day-number">15</div>
+                        <div class="day-number">16</div>
+                        <div class="day-number">17</div>
+                        <div class="day-number">18</div>
+                        <div class="day-number">19</div>
+                        <div class="day-number">20</div>
+                        <div class="day-number">21</div>
+
+                        
+                        <div class="day-number">22</div>
+                        <div class="day-number">23</div>
+                        <div class="day-number">24</div>
+                        <div class="day-number">25</div>
+                        <div class="day-number">26</div>
+                        <div class="day-number">27</div>
+                        <div class="day-number">28</div>
+                    </div>
+                </div>
+                <!-- Mostra a data selecionada embaixo-->
+                <p id="msg-data" style="text-align: center; margin-top: 10px; font-size: 0.9rem; color: #666;"></p>
+            </div>
+
+            <!-- Formulário a direita -->
+            <div class="col-form">
+                
+                <!-- Título do Formulário com Ícone -->
+                <div class="form-header">
+                    <i class="fa-regular fa-calendario-check"></i>
+                    <h2>Formulário de Cadastro</h2>
+                </div>
+
+                <!-- Card Azul do Formulário -->
+                <div class="form-card">
+                    <form id ="formAgendamento">
+                        <!-- Nome -->
+                        <div class="form-group">
+                            <label>Nome Completo:</label>
+                            <input type="text" class="form-control" required id ="nome">
+                        </div>
+                        
+                        <!-- CPF -->
+                        <div class="form-group">
+                            <label>CPF:</label>
+                            <input type="text" class="form-control" required id="cpf" maxlength="14" placeholder="000.000.000-00">
+                        </div>
+                        
+                        <!-- Endereço -->
+                        <div class="form-group">
+                            <label>Endereço:</label>
+                            <input type="text" class="form-control" required id="endereco">
+                        </div>
+                        
+                        <!-- Telefone -->
+                        <div class="form-group">
+                            <label>Telefone:</label>
+                            <input type="tel" class="form-control" required id="telefone" maxlength="15" placeholder="(00) 00000-0000">
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label>E-mail:</label>
+                            <input type="email" class="form-control" required id="email" placeholder="example@email.com">
+                        </div>
+                        
+                        <!-- Especialidade -->
+                        <div class="form-group">
+                            <label>Especialidade:</label>
+                            <div class="select-wrapper">
+                                <select class="form-select custom-arrow">
+                                    <option value="" disabled selected></option>
+                                    <option value="cardiologia">Cardiologia</option>
+                                    <option value="dermatologia">Dermatologia</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Horários -->
+                        <div class="form-group">
+                            <label>Horários disponíveis:</label>
+                            <div class="select-wrapper">
+                                <select class="form-select">
+                                    <option value="" disabled selected></option>
+                                    <option value="08:00">08:00</option>
+                                    <option value="09:00">09:00</option>
+                                </select>
+                                <div class="calendario-icon-overlay">
+                                    <i class="fa-regular fa-calendario"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botão consulta-->
+                        <button type="submit" class="btn-submit">
+                            Agendar Consulta
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Informações de contato -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                
+                <!-- Coluna 1: info de contato e download-->
+                <div class="footer-col">
+                    <h3>Sobre Nós</h3>
+                    <div class="footer-links">
+                        <a href="#">Quem somos</a>
+                        <a href="#">E-mail da Empresa</a>
+                        <a href="#">Nossa Equipe</a>
+                        <a href="#">Nosso Contato</a>
+                    </div>
+                    
+                    <div class="app-buttons">
+                        <button class="btn-store">
+                            <i class="fab fa-apple" style="font-size: 1.25rem;"></i>
+                            <div class="store-text">
+                                <small>Download on the</small>
+                                <span>App Store</span>
+                            </div>
+                        </button>
+                        <button class="btn-store">
+                            <i class="fab fa-google-play" style="font-size: 1.25rem;"></i>
+                            <div class="store-text">
+                                <small>GET IT ON</small>
+                                <span>Google Play</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Coluna 2 -->
+                <div class="footer-col">
+                    <h3>Ajuda</h3>
+                    <div class="footer-links">
+                        <a href="#">Perguntas Frequentes</a>
+                        <a href="#">Acesse o Mapa</a>
+                        <a href="#">Termos de Uso</a>
+                        <a href="#">Centro de Privacidade</a>
+                    </div>
+                    <img src="img/Logo.png" alt="Logo da Empresa" class="footer-logo">
+                
+                </div>
+
+                <!-- Coluna 3 -->
+                <div class="footer-col">
+                    <h3>Redes Sociais</h3>
+                    <div class="footer-links" style="gap: 1rem;">
+                        <a href="#" class="social-link">
+                            <div class="social-icon bg-fb">
+                                <i class="fab fa-facebook-f" style="font-size: 0.875rem;"></i>
+                            </div>
+                            <span>Facebook</span>
+                        </a>
+
+                        <a href="#" class="social-link">
+                            <div class="social-icon bg-insta">
+                                <i class="fab fa-instagram" style="font-size: 0.875rem;"></i>
+                            </div>
+                            <span>Instagram</span>
+                        </a>
+
+                        <a href="#" class="social-link">
+                            <div class="social-icon bg-wpp">
+                                <i class="fab fa-whatsapp" style="font-size: 0.875rem;"></i>
+                            </div>
+                            <span>Whatsapp</span>
+                        </a>
+
+                        <a href="#" class="social-link">
+                            <div class="social-icon bg-in">
+                                <i class="fab fa-linkedin-in" style="font-size: 0.875rem;"></i>
+                            </div>
+                            <span>Linkedin</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                © 2025 - All Rights Reserved
+            </div>
+        </div>
+    </footer>
+
+    <div id = "popup-sucesso" class="popup-sucesso">
+        <div class="popup-content">
+            <!-- Botão de X para fechar -->
+            <span class="popup-close-x" id="btn-x-fechar">&times;</span>
+            
+           <!-- logo -->
+            <img src="img/Logo.png" alt="Logo da Empresa" class="popup-logo">
+
+            <h2 class="popup-title">Agendamento Bem Sucedido</h2>
+            <p class="popup-subtitle">Sua saúde em primeiro lugar</p>
+            
+            <button class="popup-btn-fechar" id="btn-ok-fechar">Fechar</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        const cpf_entrada = document.getElementById('cpf');
+        const cardCalendario = document.getElementById('cardCalendario');
+            
+            cpf_entrada.addEventListener('input', function(e) {
+            let valor = e.target.value;
+            
+            // Remove tudo que não é número
+            valor = valor.replace(/\D/g, "");
+            
+            // Coloca os pontos e traço
+            if (valor.length > 9) {
+                valor = valor.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+            } else if (valor.length > 6) {
+                valor = valor.replace(/(\d{3})(\d{3})(\d{3})/, "$1.$2.$3");
+            } else if (valor.length > 3) {
+                valor = valor.replace(/(\d{3})(\d{3})/, "$1.$2");
+            }
+            
+            e.target.value = valor;
+        });
+
+            // formatação do telefone
+        const inputTelefone = document.getElementById('telefone');
+        inputTelefone.addEventListener('input', function(e) {
+            let valor = e.target.value;
+            
+            // Remove tudo que não é número
+            valor = valor.replace(/\D/g, "");
+            
+            // Coloca a formatação (XX) XXXXX-XXXX
+            if (valor.length > 10) {
+                valor = valor.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+            } else if (valor.length > 5) {
+                valor = valor.replace(/(\d{2})(\d{4})(\d{0,4})/, "($1) $2-$3");
+            } else if (valor.length > 2) {
+                valor = valor.replace(/(\d{2})(\d{0,5})/, "($1) $2");
+            } else {
+                valor = valor.replace(/(\d{0,2})/, "($1");
+            }
+            
+            e.target.value = valor;
+        });
+
+        // Seleção de calendário
+        const dias = document.querySelectorAll('.day-number');
+        const msgData = document.getElementById('msg-data');
+
+        const anoFixo = 2025;
+        const mesFixo = 11; // Dezembro
+
+         dias.forEach(dia => {
+            dia.addEventListener('click', function() {
+                // limpa o erro ao clicar
+                cardCalendario.style.border = "2px solid transparent";
+
+                const diaSelecionado = parseInt(this.innerText);
+
+                const dataClique = new Date(anoFixo, mesFixo, diaSelecionado);
+
+                const hoje = new Date();
+                hoje.setHours(0,0,0,0); // Zera horas para comparação apenas de datas
+
+                if(dataClique < hoje){
+                    alert("Não é possível selecionar uma data passada.");
+                    return;
+                }
+
+                // Remove seleção anterior
+                dias.forEach(d => d.classList.remove('day-selected'));
+                // Adiciona na atual
+                this.classList.add('day-selected');
+                msgData.innerText = "Dia selecionado: " + this.innerText + "/12/2025";
+                msgData.style.color = "#00FA3";
+                msgData.style.fontWeight = "bold";
+            });
+        });
+        // Popup de sucesso
+        const popup = document.getElementById('popup-sucesso');
+        const btnFechar = document.getElementById('btn-ok-fechar');
+        const btnX = document.getElementById('btn-x-fechar');
+
+        function abrirPopup() {
+            popup.style.display = 'flex';
+        }
+
+        function fecharPopup() {
+            popup.style.display = 'none';
+        }
+
+        //envio do formulário somente com cpf válido
+
+        const formulario = document.getElementById('formAgendamento');
+
+        formulario.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const cpf = cpf_entrada.value;
+
+            // xxx.xxx.xxx-xx
+            if(cpf.length !== 14) {
+                alert('Por favor, insira um CPF válido.');
+                cpf_entrada.style.borderColor = '2px solid red';
+                return;
+            }else{
+                cpf_entrada.style.borderColor = "none";
+            }
+
+            // (xx) xxxxx-xxxx
+            if(inputTelefone.value.length < 14){
+                alert('Por favor, insira um telefone válido.');
+                inputTelefone.style.borderColor = '2px solid red';
+                return;
+            }
+            // verifica se uma data foi selecionada
+            if(!document.querySelector('.day-selected')){
+                alert('Por favor, selecione uma data no calendário.');
+                cardCalendario.style.borderColor = "red";
+                cardCalendario.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' });
+                return;
+            }
+            // se sobreviveu até aqui, abre o calendário
+
+            abrirPopup();
+
+        });
+
+        // lógica de fechar popup
+        btnFechar.addEventListener('click', fecharPopup);
+        btnX.addEventListener('click', fecharPopup);
+
+        popup.addEventListener('click', function(e) {
+            if (e.target === popup) {
+                fecharPopup();
+            }
+        });
+
+
+    </script>
+</body>
+</html>
