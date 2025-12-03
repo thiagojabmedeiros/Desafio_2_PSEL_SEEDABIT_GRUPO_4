@@ -38,6 +38,19 @@ section{
     padding: 28px 8%;
 }
 
+.section-title{
+    font-size: 2rem;
+    color: #13225E;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #524f4f;
+    margin-bottom: 2rem;
+}
+
 #nav_bar{
     width: 100%;
     display: flex;
@@ -157,6 +170,60 @@ section{
     min-height: calc(100vh - 91px);
 }
 
+#ods{
+    padding: 4rem 0;
+    background-color: #f5f7fa;
+}
+
+.ods-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.ods-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all ease 0.5s;
+}
+
+.ods-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.ods-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.ods-3 { background-color: #4c9f38; }  
+.ods-10 { background-color: #dd1367; } 
+.ods-17 { background-color: #19486a; } 
+
+.ods-card h3 {
+    color: #13225E;
+    margin-bottom: 0.5rem;
+}
+
+.ods-card p {
+    color: #524f4f;
+    font-size: 0.95rem;
+}
+
+
+
 @media screen and (max-width:600px){
 
      #nav_logo {
@@ -223,6 +290,9 @@ section{
     }
     #banner{
         display: none;
+    }
+    .ods-grid {
+        grid-template-columns: 1fr;
     }
     
 }
