@@ -147,7 +147,6 @@ Desafio_2_PSEL_SEEDABIT_GRUPO_4/
 O site é totalmente responsivo e se adapta a diferentes tamanhos de tela:
 
 - **Desktop:** Layout completo com grid de 4 colunas
-- **Tablet:** Layout adaptado com 2 colunas
 - **Mobile:** Layout em coluna única com menu hamburguer
 
 ---
