@@ -1,12 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recife Saudável - Acesso à Saúde para Todos</title>
+    <meta name="description" content="Recife Saudável - Ampliando o acesso à saúde pública através de parcerias público-privadas">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <header> 
+        <nav id="nav_bar">
+            <img src="assets/Logo Saudável Recife.png" id="nav_logo" alt="">
+            <ul id="nav_list">
+                <li class="nav-item active"><a href="#inicio">Início</a></li>
+                <li class="nav-item active"><a href="#objetivo">Nosso Objetivo</a></li>
+                <li class="nav-item active"><a href="serviço"> Serviços</a></li>
+                <li class="nav-item active"><a href="depoimento">Depoimentos</a></li>
+                <li class="nav-item active"><a href="blog">Blog</a></li>
+            </ul>
+            <a href="#agendamento" id="btn_agendamento" class="btn-default">
+                Agendar Consulta
+            </a>
+        </nav>
+
+        <button id = "mobile_btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item ">
+                    <a href="#">Início</a>
+                </li>
+                <li class="nav-item ">
+                    <a href="#">Nosso Objetivo</a>
+                </li>
+                <li class="nav-item ">
+                    <a href="#">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">Depoimentos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="">Blog</a>
+                </li>
+            </ul>
+            <button class="btn-default">Agendamento</button>
+
+        </div>
+    </header>
+    <main id="content">
+        <section id="inicio">
+
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="title">
+                    <span class="highlight-dark">Acesso,<br> <span class="highlight-light">colaboração</span> e <br> Bem estar</span>
+                </h1>
+                <p class="description">Seja bem-vindo(a). Aqui tornamos a saúde mais acessível, conectando você a profissionais e serviços especializados.</p>
+                <a href="" class="btn-default">Agendar agora</a>
+           </div>
+           
+
+           <div id="banner">
+                <img src="assets/med-associacao.jpg" alt="">
+                <h2 id="banner_title"> <span class="highlight-light">Nosso Lema </span> </h2>
+                <p id="banner_description"> <span class="highlight-light">A união que transforma a saúde: poder público e iniciativa privada juntos para te atender de onde estiver</span></p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
