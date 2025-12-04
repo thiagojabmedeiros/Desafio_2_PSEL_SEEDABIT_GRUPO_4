@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Saudável Recife - Depoimentos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .header-logo {
+            max-height: 50px; 
+            width: auto;      
+            display: block;
+        }
+
+        .menu-btn {
+            background-color: #6fa8dc;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 12px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .menu-line {
+            width: 20px;
+            height: 2px;
+            background-color: white;
+            border-radius: 2px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #2b8cbd;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 20px 0;
+        }
+
+        .carousel-section {
+            background-color: #111d4a;
+            padding: 40px 0;
+            width: 100%;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 0 20px;
+            scroll-snap-type: x mandatory; 
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+        }
+
+        .carousel-track::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card {
+            flex: 0 0 85%; 
+            background-color: #2b8cbd;
+            border-radius: 20px;
+            overflow: hidden;
+            scroll-snap-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: center;
+            color: #111d4a;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .quote {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .author {
+            font-weight: 800;
+            font-size: 0.95rem;
+        }
+
+        .cta-container {
+            padding: 30px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-schedule {
+            background-color: #0060aa; 
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px; 
+            font-size: 1rem;
+            font-weight: 600;
+            width: 100%; 
+            max-width: 350px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .btn-schedule:active {
+            transform: scale(0.98);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="img\Logo.png" alt="Logo Saudável Recife" class="header-logo">
+        
+        <button class="menu-btn">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </button>
+    </header>
+
+    <h2 class="section-title">Depoimentos</h2>
+
+    <section class="carousel-section">
+        <div class="carousel-track">
+            
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtidKBCZIQO3PGMxV4aMcJBq5KmDnvxsjeDg&s" alt="Hospital" class="card-image">
+                <div class="card-content">
+                    <p class="quote">"Muito prático. A Rede Harmonia confirmou tudo na hora."</p>
+                    <span class="author">— Felipe Silva.</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img\Rectangle 34.png" alt="Consultório" class="card-image">
+                <div class="card-content">
+                    <p class="quote">"Consegui ortopedista rápido na OrtoPrime Recife. Salvou meu dia."</p>
+                    <span class="author">— Carlos M.</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img\Rectangle 33.png" alt="Médicos" class="card-image">
+                <div class="card-content">
+                    <p class="quote">"Triagem precisa, facilita nosso atendimento e diagnóstico."</p>
+                    <span class="author">— Santa Aurora</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img\Rectangle 35.png" alt="Médica com tablet" class="card-image">
+                <div class="card-content">
+                    <p class="quote">"Acompanhamento ótimo após minha consulta na Santa Aurora."</p>
+                    <span class="author">— Janaina Marques</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="cta-container">
+        <button class="btn-schedule">
+            Venha agendar sua consulta
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+
+</body>
+</html>
