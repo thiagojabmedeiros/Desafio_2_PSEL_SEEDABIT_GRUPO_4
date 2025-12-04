@@ -26,11 +26,14 @@ html{
 
 header{
     width: 100%;
-    padding: 5px 8%;
-    position: sticky;
+    padding: 2px 8%;
+    position: fixed;
     background-color: #f0ebeb;
     z-index: 5;
-  
+}
+
+main{
+    padding-top: 80px;
 }
 
 
@@ -56,6 +59,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 #nav_list{
@@ -78,19 +82,19 @@ section{
 }
 
 #nav_logo{
-    width: 110px;
+    width: 80px;
 }
 
 .btn-default{
     text-decoration: none;
-    padding: 20px;
-    color: #2e2e2e;
+    padding: 15px;
     background-color: #2092D3;
     border-radius: 10px;
     color: white;
     font-weight: bold;
     transition: all ease 0.5s;
     text-align: center;
+    cursor: pointer;
 }
 
 .btn-default:hover{
@@ -170,6 +174,8 @@ section{
     min-height: calc(100vh - 91px);
 }
 
+/*Estilos da ODS*/
+
 #ods{
     padding: 4rem 0;
     background-color: #f5f7fa;
@@ -220,6 +226,220 @@ section{
 .ods-card p {
     color: #524f4f;
     font-size: 0.95rem;
+}
+
+
+/*Estilos da seção de Depoimentos */
+#testmonials_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.testmonials-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    /* flex-wrap: wrap; */
+}
+
+.testmonials-card {
+    background-color: #4db6ac; 
+    border-radius: 15px;
+    overflow: hidden;
+    width: 23%; 
+    min-width: 250px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+}
+
+.card-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; 
+    background-color: #ddd; 
+}
+
+.card-content {
+    padding: 15px;
+    color: #00334e; 
+    font-size: 0.9rem;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.author {
+    font-weight: 700;
+    display: block;
+    margin-top: auto;
+}
+
+
+/*Estilos da página do protótipo*/
+.prototipo {
+    padding: 4rem 0;
+    background-color: #f0ebeb;
+    text-align: center;
+}
+
+/* Estilos do Blog */
+
+.blog {
+    padding: 4rem 0;
+    background-color: #ffffff;
+}
+
+/* Container do formulário */
+.blog-form-container {
+    background-color: #f5f7fa;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-form-container h3 {
+    color: #13225E;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Formulário */
+.blog-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #13225E;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all ease 0.5s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2092D3;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical; 
+}
+
+.blog-posts-container {
+    margin-top: 2rem;
+}
+
+.blog-posts-container h3 {
+    color: #13225E;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+
+.post-card {
+    background-color: #f5f7fa;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all ease 0.5s;
+}
+
+.post-card:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.post-card h3 {
+    color: #13225E;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.post-card .meta {
+    color: #2092D3;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-card .content {
+    color: #524f4f;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.post-card .date {
+    color: #524f4f;
+    font-size: 0.8rem;
+}
+
+.loading {
+    text-align: center;
+    color: #524f4f;
+    padding: 2rem;
+}
+
+.error {
+    text-align: center;
+    color: #dc3545;
+    padding: 2rem;
+}
+
+/* Botão de deletar (para o blog) */
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    transition: all ease 0.5s;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
 }
 
 
@@ -293,6 +513,20 @@ section{
     }
     .ods-grid {
         grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 90%; 
+    }
+    
+    .testmonials-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .testmonials-card {
+        width: 90%;
+        max-width: 350px;
     }
     
 }

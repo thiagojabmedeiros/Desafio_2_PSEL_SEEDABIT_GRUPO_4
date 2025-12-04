@@ -1,0 +1,13 @@
+# Arquivo de configuração com chaves sensíveis
+config.js
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Node modules (caso use no futuro)
+node_modules/
