@@ -10,7 +10,7 @@ body {
     color: #333;
 }
 
-.container {
+.service-container {
     max-width: 1240px;
     margin: 0 auto;
     padding: 0 20px;
@@ -75,7 +75,7 @@ nav a:hover, nav a.active {
     gap: 24px;
 }
 
-.card {
+.card-outros-services {
     background-color: #0F1B40;
     border-radius: 16px;
     height: 180px;
@@ -87,7 +87,7 @@ nav a:hover, nav a.active {
     cursor: pointer;
 }
 
-.card:hover {
+.card-outros-services:hover {
     transform: translateY(-5px);
 }
 
@@ -103,6 +103,9 @@ nav a:hover, nav a.active {
     width: auto;
     object-fit: contain;
 }
+
+
+
 
 .sessao-fotos-servicos {
     background-color: #081133; 

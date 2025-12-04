@@ -4,71 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saudável Recife</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-                <img src="img\Logo.png" alt="Saudável Recife" style="width: 220px;">
-            </div>
-            
-            <nav>
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Nosso objetivo</a></li>
-                    <li><a href="#" class="active">Serviços</a></li>
-                    <li><a href="#">Depoimentos</a></li>
-                </ul>
-            </nav>
+    <header> 
+        <nav id="nav_bar">
+            <img src="assets/Logo Saudável Recife.png" id="nav_logo" alt="">
+            <ul id="nav_list">
+                <li class="nav-item active"><a href="index.html#inicio">Início</a></li>
+                <li class="nav-item active"><a href="index.html#objetivo">Nosso Objetivo</a></li>
+                <li class="nav-item active"><a href="index.html#serviço"> Serviços</a></li>
+                <li class="nav-item active"><a href="index.html#depoimento">Depoimentos</a></li>
+                <li class="nav-item active"><a href="index.html#blog">Blog</a></li>
+            </ul>
+            <a href="index.html#agendamento" id="btn_agendamento" class="btn-default">
+                Agendar Consulta
+            </a>
+        </nav>
 
-            <a href="#" class="btn-agendar">Agendar Consulta ➔</a>
+        <button id = "mobile_btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+         <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item ">
+                    <a href="#">Início</a>
+                </li>
+                <li class="nav-item ">
+                    <a href="#">Nosso Objetivo</a>
+                </li>
+                <li class="nav-item ">
+                    <a href="#">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a href="">Depoimentos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="">Blog</a>
+                </li>
+            </ul>
+            <button class="btn-default">Agendamento</button>
+
         </div>
-    </header>
+
 
     <section class="servicos-section">
         <div class="container">
             
             <div class="grid-servicos">
 
-                <div class="card">
+                <div class="card-outros-services">
                     <h3>Oftalmologia</h3>
                     <img src="img\oftalmologia.png" alt="Oftalmologia">
                 </div>
 
-                <div class="card">
+                <div class="card-outros-services">
                     <h3>Cardiologia</h3>
                     <img src="img\cardiologia.png" alt="Cardiologia">
                 </div>
 
-                <div class="card">
+                <div class="card-outros-services">
                     <h3>Ginecologia</h3>
                     <img src="img\ginecologia.png" alt="Ginecologia">
                 </div>
 
-                <div class="card">
+                <div class="card-outros-services">
                     <h3>Neurologia</h3>
                     <img src="img\neurologia.png" alt="Neurologia">
                 </div>
 
-                <div class="card">
+                <div class="card-outros-services">
                     <h3>Endocrinologia</h3>
                     <img src="img\endocrinologia.png" alt="Endocrinologia">
                 </div>
 
-                <div class="card">
+                <div class="card-outros-services">
                     <h3>Ortopedia</h3>
                     <img src="img\ortopedia.png" alt="Ortopedia">
                 </div>
 
-                <div class="card">
+                <div class="card-outros-services">
                     <h3>Pediatria</h3>
                     <img src="img\pediatria.png" alt="Pediatria">
                 </div>
 
-                <div class="card">
+                <div class="card-outros-services">
                     <h3>Oncologia</h3>
                     <img src="img\oncologia.png" alt="Oncologia">
                 </div>
@@ -76,6 +100,6 @@
             </div>
         </div>
     </section>
-
+    <script src="main.js"></script>
 </body>
 </html>
