@@ -746,7 +746,7 @@ section{
 
 /*Seção de Agendamento */
 
-.agendamento-section {
+#agendamento-section {
         display: flex;
         flex-direction: column;
         gap: 3rem;
@@ -755,7 +755,7 @@ section{
         padding: 2rem 0;
 }
 
-.agendamento-section {
+#agendamento-section {
     flex-direction: row;
     gap: 5rem;
 }
