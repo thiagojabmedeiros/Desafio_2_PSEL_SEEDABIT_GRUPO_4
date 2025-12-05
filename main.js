@@ -375,9 +375,45 @@ popup.addEventListener('click', function(e) {
 
 
 $(document).ready(function(){
-    $('#mobile_btn').on('click', function(){
-        $('#mobile_menu').toggleClass('active')
-    })
+    ScrollReveal().reveal('#img_objetivos',{
+        origin: 'left',
+        duration: 2000,
+        distance: '20%'
+    });
+    ScrollReveal().reveal('#cta', {
+        origin: 'left',
+        duration: 2000,
+        distance: '20%'
+    });
+
+    ScrollReveal().reveal('.container-cards', {
+        origin: 'left',
+        duration: 1000,
+        distance: '20%'
+    });
+    ScrollReveal().reveal('.testmonials-grid', {
+        origin: 'left',
+        duration: 2000,
+        distance: '20%'
+    });
+    ScrollReveal().reveal('.blog-posts-container', {
+        origin: 'left',
+        duration: 2000,
+        distance: '20%'
+    });
+
+    ScrollReveal().reveal('', {
+        origin: 'left',
+        duration: 2000,
+        distance: '20%'
+    });
+    ScrollReveal().reveal('.col-form', {
+        origin: 'right',
+        duration: 2000,
+        distance: '20%'
+    });
+    
  })
+
 
 

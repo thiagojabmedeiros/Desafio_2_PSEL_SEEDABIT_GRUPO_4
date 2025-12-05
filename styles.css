@@ -183,7 +183,7 @@ section{
    
     width: 100%;
     max-width: 1200px;
-    padding: 40px 20px;
+    padding: 40px 21px 0px 21px;
     /* Centraliza o H1 */
 }
 
@@ -374,13 +374,13 @@ section{
 }
 
 .conteudo-card {
-    padding: 20px;
+    padding: 18px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-align: center;
-    gap: 15px;
+    gap: 0px;
 }
 
 .conteudo-card h3 {
