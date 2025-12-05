@@ -163,8 +163,16 @@ section{
 
 #mobile_menu{
     display: none;
+    width: 100%;
+    background-color: #f0ebeb;
+    padding: 10px 0;
 }
 
+#mobile_menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 #mobile_btn{
     display: none;
@@ -1049,6 +1057,7 @@ footer{
 .logo-gradient-text {
     background: linear-gradient(to right, #60a5fa, #2563eb);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -1193,11 +1202,6 @@ footer{
         cursor: pointer;
         z-index: 10;}
 
-    #mobile_menu.active{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     #mobile_nav_list{
         display: flex;
         flex-direction: column;
@@ -1278,12 +1282,18 @@ footer{
         align-items: center; 
     }
 
-
-    .col-calendario, 
+    .col-calendario {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+        order: 1;
+    }
+    
     .col-form {
         width: 100%;
         max-width: 100%;
-        margin-right: 0; 
+        margin-right: 0;
+        order: 2;
     }
 
 
