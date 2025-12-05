@@ -373,13 +373,19 @@ popup.addEventListener('click', function(e) {
 });
 
 
-
-
 $(document).ready(function(){
 
     $('#mobile_btn').on('click', function(){
          $('#mobile_menu').toggleClass('active')
      })
+})
+
+
+$(document).ready(function(){
+
+    // $('#mobile_btn').on('click', function(){
+    //      $('#mobile_menu').toggleClass('active')
+    //  })
 
     ScrollReveal().reveal('#img_objetivos',{
         origin: 'left',
