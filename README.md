@@ -26,7 +26,7 @@ Uma plataforma que conecta cidadãos a serviços de saúde, unindo o setor públ
 
 ## 🔗 Links Importantes
 
-- **🌐 Site Publicado:** [Link do GitHub Pages - adicionar após deploy]
+- **🌐 Site Publicado:** [https://thiagojabmedeiros.github.io/Desafio_2_PSEL_SEEDABIT_GRUPO_4/]
 - **🎨 Protótipo Figma:** [Ver Protótipo](https://www.figma.com/design/bjLj1w0mgXWER6JrubKD8H/Prototipa%C3%A7%C3%A3o---Concep%C3%A7%C3%A3o--Copy-?node-id=17-872)
 
 ---
@@ -36,6 +36,7 @@ Uma plataforma que conecta cidadãos a serviços de saúde, unindo o setor públ
 - **HTML5** - Estrutura da página
 - **CSS3** - Estilização e responsividade
 - **JavaScript (ES6+)** - Interatividade e integração com API
+- **Jquery** - Animações na Página
 - **Fetch API** - Requisições HTTP
 
 ---
